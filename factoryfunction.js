@@ -25,8 +25,8 @@ function criaPerfilDeUsuario (nome, idade, email) {
 
 const usuario1 = criaPerfilDeUsuario("Adriano", 29, "Adriano@gmail.com")
 const usuario2 = criaPerfilDeUsuario("Salvador", 30, "Salvador@gmail.com")
-console.log(usuario1.apresentar());
-console.log(usuario2.apresentar());
+// console.log(usuario1.apresentar());
+// console.log(usuario2.apresentar());
 
 
 /*
@@ -36,5 +36,39 @@ A função criaPerfilDeUsuario toda vez que é invocada, cria um novo objeto con
 */
 
 
+//EX 02: GERADOR DE TAREFAS DE PROJETO
+function criaTarefa (titulo, prioridade ) {
+    return {
+        nome: titulo,
+        nivelPrioridade: prioridade,
+        completa: false,
+        criacao: new Date().toLocaleDateString(),
+
+        alternarStatus(){
+         this.completa = !this.completa
+        },
+
+        detalhar(){
+
+            const statusTarefa = this.completa ? "Completa" : "Pendente"
+            return `Tarefa: ${this.nome}. Prioridade: ${this.nivelPrioridade}. Criada em: ${this.criacao}. Status: ${statusTarefa}.`
+        }
+    }
+}
 
 
+const tarefaDesenvolvimento = criaTarefa("Testar API", "Alta")
+const tarefaDocumentacao = criaTarefa("Escrever Guia", "Média")
+
+console.log(tarefaDesenvolvimento.detalhar());
+console.log(tarefaDesenvolvimento.alternarStatus());
+console.log(tarefaDesenvolvimento.detalhar());
+
+/*
+EXPLICAÇÃO DA IMPLEMENTAÇÃO DO EXERCÍCIO:
+    A função criaTarefa cria um novo objeto de tarefa em cada chamada.
+
+    O método alternarStatus inverte o valor booleano da propriedade completa.
+
+    O método detalhar retorna uma string informativa que apresenta todos os detalhes da tarefa, traduzindo o estado booleano de completa para as palavras "Completa" ou "Pendente".
+*/
