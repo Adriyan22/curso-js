@@ -51,4 +51,50 @@ texto.split(' ') //retorna um array com cada palavra separada por virgula.
 texto.replace('tamanho', 'cumprimento')
 
 
+//EX 01: dada uma string, exiba no console o seu COMPRIMENTO usando a propriedade LENGTH.
+const string = "minha string"
+console.log(string.length)
+
+
+//EX 02: Dada uma string com um NOME, use a notação de colchetes `[]` para retornar o primeiro caractere (INDICE 0) e o último caracatere(usansdo a LENGTH -1)
+const nome = "Adriano"
+console.log(`Primeiro caracatere: ${nome[0]} \nÙltimo caractere: ${nome[nome.length - 1]}`);
+
+
+//EX 03: Dada uma string, CONVERTA-A inteiramnete para letras maiúsculas usando o método toUpperCase() e, em seguida, inteiramente para minúsculas usando toLowerCase()
+const stringMaiuscula = string.toLocaleUpperCase()
+const stringMinuscula = string.toLowerCase()
+console.log(`Maiuscula: ${stringMaiuscula}`)
+console.log(`Minuscula: ${stringMinuscula}`)
+
+//EX 04: Dada uma string, use o método `.slice()` para extrair uma substring que comece em um índice específico e vá até o final da string. Tente também extrair uma substring definindo o início e o fim (ex: de 2 a 5).
+const extraindo = string.slice(5, 12)
+console.log(extraindo);
+
+
+//EX 05: Dada uma frase, use o método `.split(' ')` para dividi-la em um array de palavras. Em seguida, use o método `.indexOf()` no array resultante para encontrar a posição de uma palavra específica.
+const frase = "Programação é tudo pra mim"
+const arrayDePalavras = frase.split(' ')
+const indiceDeAlgumaPalavra = arrayDePalavras.indexOf('mim')
+console.log(arrayDePalavras)
+console.log(`mim na posição: ${indiceDeAlgumaPalavra}`)
+
+
+//EX 05: Dada uma string, use o método `.substring()` para extrair uma parte, definindo o índice inicial e o final. Tente inverter os índices (ex: `substring(5, 0)`) e observe o resultado.
+let subString = string.substring(5, 0)
+console.log(subString);
+
+
+//EX 06: Dada uma string contendo um e-mail, use o método `.indexOf('@')` para encontrar a posição do caractere "@" e, em seguida, use `.substring()` para extrair o domínio (tudo que vem depois do "@").
+const email = 'pessoa@gmail.com.br'
+const posicao = email.indexOf("@")
+const dominio = email.substring(posicao + 1)
+console.log(`@ encontrado na posição: ${posicao}`)
+console.log(`Dominio completo: ${dominio}`)
+
+
+
+
+
+
 
