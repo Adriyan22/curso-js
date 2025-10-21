@@ -65,3 +65,25 @@ async function montarMensagem() {
 }
 
 montarMensagem().then(saudacoes => console.log(saudacoes))
+
+
+
+//EX 03: CARREGAMENTO DE DADOS 
+function buscarUsuarios(array){
+    return new Promise((resolve) => {
+        setTimeout(() => resolve(array) , 5000)
+    })
+}
+
+async function carregarDados() {
+    console.log("Carregando usuários ...");
+
+    try {
+        const resultado = await buscarUsuarios(['Alice', 'Bob', 'Charlie'])
+        return resultado
+    } catch (error) {
+        console.log(`Erro capturado: ${error}`)
+    }
+}
+
+carregarDados().then(res => console.log(res))
