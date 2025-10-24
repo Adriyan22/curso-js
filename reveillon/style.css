@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #fff;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    background-image: url('./reveillon2026.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    
+}
+
+.next-year {
+    font-size: 10rem;
+    position: absolute;
+    bottom: 0px;
+    opacity: 0.5;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 400;
+    position: absolute;
+    top: 50px;
+}
+
+#container-countdown {
+    width: 90%;
+    display: none;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 30%;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    
+}
+
+span {
+    font-size: 3rem;
+}
+
