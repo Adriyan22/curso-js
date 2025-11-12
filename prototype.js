@@ -67,4 +67,5 @@ console.log(meuCaminhao.frear(50))
 console.log(meuCaminhao.obterStatus())
 
 
-
+//parada
+https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes#a_propriedade_prototype_onde_os_membros_herdados_s%C3%A3o_definidos
